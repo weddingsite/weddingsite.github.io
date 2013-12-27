@@ -43,7 +43,7 @@
 							position: 'top-left',
 							width: '3.5em',
 							height: '2.25em',
-							html: '<div data-action="togglePanel" data-args="sidePanel" class="toggle"></div>'
+							html: '<div data-action="togglePanel" data-args="sidePanel" class="toggle">Menu</div>'
 						}
 					}
 				}
