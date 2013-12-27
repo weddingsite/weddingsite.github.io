@@ -1,4 +1,4 @@
 weddingsite.github.io
 =====================
 
-Our wedding website! More to be added in a bit.
+Our wedding website! The template is Prologue by HTML5 Up (http://html5up.net).
