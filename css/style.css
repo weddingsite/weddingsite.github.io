@@ -950,7 +950,7 @@
 		
 			#header .icons a
 			{
-				color: #41484c;
+				color: #666;
 				-moz-transition: color 0.35s ease-in-out;
 				-webkit-transition: color 0.35s ease-in-out;
 				-o-transition: color 0.35s ease-in-out;
@@ -1035,7 +1035,7 @@
 						{
 							position: absolute;
 							left: 0;
-							color: #41484c;
+							color: #666;
 							text-align: center;
 							width: 1.25em;
 							line-height: 1.75em;
