@@ -23,14 +23,14 @@
 		font-size: 19pt;
 		font-weight: 300;
 		line-height: 1.75em;
-		color: #888;
+		color: #000;
 		-webkit-text-stroke: 0.15px;
 	}
 
 	h1,h2,h3,h4,h5,h6
 	{
 		font-weight: 200;
-		color: #666;
+		color: #000;
 		line-height: 1.5em;
 	}
 	
@@ -102,7 +102,7 @@
 
 		a:hover
 		{
-			color: #E27689;
+			color: #2E2A40;
 			border-bottom-color: rgba(255,255,255,0);
 		}
 
@@ -434,7 +434,7 @@
 			color: #fff !important;
 			text-decoration: none;
 			padding: 0.75em 2.5em 0.75em 2.5em;
-			background-color: #8ebebc;
+			background-color: #7F71A2;
 			border: 0;
 			cursor: pointer;
 			background-image: -moz-linear-gradient(top, rgba(0,0,0,0), rgba(0,0,0,0.15)), url('images/overlay.png');
@@ -451,12 +451,12 @@
 
 			.button:hover
 			{
-				background-color: #9ececc;
+				background-color: #A096BB;
 			}
 			
 			.button:active
 			{
-				background-color: #7eaeac;
+				background-color: #625583;
 			}
 		
 	/* Item */
@@ -1054,7 +1054,7 @@
 
 							#nav ul li a.active span:before
 							{
-								color: #E27689;
+								color: #AC95E5;
 							}
 
 /*********************************************************************************/
@@ -1065,7 +1065,8 @@
 	{
 		margin-left: 375px;
 		text-align: center;
-		background-color: #dce3e2;
+		background-color: #625583;
+		color: #EEE;
 		padding: 3em 0 4em 0;
 		box-shadow: inset 0 1px 0 0 rgba(0,0,0,0.05), inset 0 0.1em 0.1em 0 rgba(0,0,0,0.025);
 		font-size: 0.8em;
@@ -1084,6 +1085,10 @@
 			#footer .copyright .menu
 			{
 				margin: 0;
+			}
+			#footer .copyright a:hover
+			{
+				color: #BFA5FF;
 			}
 
 /*********************************************************************************/
@@ -1118,15 +1123,15 @@
 	
 		#main > section.two
 		{
-			background-color: #f5fafa;
+			background-color: #F7F6F9;
 		}
 	
 		#main > section.three
 		{
-			background-color: #ecf1f1;
+			background-color: #E9E6EF;
 		}
 	
 		#main > section.four
 		{
-			background-color: #e8edec;
+			background-color: #DBD7E5;
 		}
