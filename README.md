@@ -1,4 +1,4 @@
 weddingsite.github.io
 =====================
 
-Our wedding website! 
+Our wedding website! More to be added in a bit.
