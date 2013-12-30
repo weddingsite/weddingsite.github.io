@@ -1,0 +1,6 @@
+exclude: [Gemfile, Gemfile.lock, README.txt, README.md, LICENSE.txt]
+
+prologue:
+        author: Jason and Ali
+        byline: October 4, 2014
+        avatar: images/avatar.jpg

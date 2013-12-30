@@ -1,0 +1,91 @@
+<!DOCTYPE HTML>
+<!--
+	Prologue 1.1 by HTML5 UP
+	html5up.net | @n33co
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+	<head>
+		<title>{{ page.title }}</title>
+		<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+		<meta name="description" content="" />
+		<meta name="keywords" content="" />
+		<link href="http://fonts.googleapis.com/css?family=Source+Sans+Pro:200,300,400,600" rel="stylesheet" type="text/css" />
+		<!--[if lte IE 8]><script src="js/html5shiv.js"></script><![endif]-->
+		<script src="js/jquery.min.js"></script>
+		<script src="js/skel.min.js"></script>
+		<script src="js/skel-panels.min.js"></script>
+		<script src="js/init.js"></script>
+		<noscript>
+			<link rel="stylesheet" href="css/skel-noscript.css" />
+			<link rel="stylesheet" href="css/style.css" />
+			<link rel="stylesheet" href="css/style-wide.css" />
+		</noscript>
+		<!--[if lte IE 9]><link rel="stylesheet" href="css/ie9.css" /><![endif]-->
+		<!--[if lte IE 8]><link rel="stylesheet" href="css/ie8.css" /><![endif]-->
+	</head>
+	<body>
+
+		<!-- Header -->
+			<div id="header" class="skel-panels-fixed">
+
+				<div class="top">
+
+					<!-- Logo -->
+						<div id="logo">
+							<span class="image avatar48"><img src="{{ site.prologue.avatar }}" alt="" /></span>
+							<h1 id="title">{{ site.prologue.author }}</h1>
+							<span class="byline">{{ site.prologue.byline }}</span>
+						</div>
+
+					<!-- Nav -->
+						<nav id="nav">
+							<ul>
+								{% for link in page.nav %}
+								<li><a href="#{{ link.id }}" id="{{ link.id }}-link" class="skel-panels-ignoreHref"><span class="fa fa-{{ link.icon }}">{{ link.text }}</span></a></li>
+								{% endfor %}
+							</ul>
+						</nav>
+						
+				</div>
+				
+				<div class="bottom">
+
+					<!-- Social Icons -->
+						<ul class="icons">
+							<!--<li><a href="#" class="fa fa-twitter solo"><span>Twitter</span></a></li>-->
+							<li><a href="#" class="fa fa-facebook solo"><span>Facebook</span></a></li>
+							<li><a href="#" class="fa fa-envelope solo"><span>Email</span></a></li>
+							<li><a href="#" class="fa fa-github solo"><span>Github</span></a></li>
+						</ul>
+				
+				</div>
+			
+			</div>
+
+		<!-- Main -->
+			<div id="main">
+			
+				<!-- Page content -->
+					<section id="{{ page.nav[0].id }}" class="{{ page.nav[0].class }}">
+						<div class="container">
+							{{ content }}
+						</div>
+					</section>
+			</div>
+
+		<!-- Footer -->
+			<div id="footer">
+				
+				<!-- Copyright -->
+					<div class="copyright">
+						<p>&copy; 2013 Jason &amp; Ali Biatek. All rights reserved.</p>
+						<ul class="menu">
+							<li>Design based on &#8220;Prologue&#8221; by <a href="http://html5up.net">HTML5 UP</a></li>
+						</ul>
+					</div>
+				
+			</div>
+
+	</body>
+</html>
