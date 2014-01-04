@@ -4,3 +4,23 @@ prologue:
         author: Jason and Ali
         byline: October 4, 2014
         avatar: images/avatar.jpg
+        copyright: "2013 Jason &amp; Ali Biatek. All rights reserved."
+        bottom: 
+                - "Design based on &#8220;Prologue&#8221; by <a href=\"http://html5up.net\">HTML5 UP</a>"
+                - "Photos by ???"
+        social:
+              - text: Twitter
+                href: "#"
+                icon: twitter
+
+              - text: Facebook
+                href: "#"
+                icon: facebook
+
+              - text: Email
+                href: "#"
+                icon: envelope
+
+              - text: Github
+                href: "#"
+                icon: github

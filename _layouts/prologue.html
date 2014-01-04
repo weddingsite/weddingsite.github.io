@@ -53,10 +53,9 @@
 
 					<!-- Social Icons -->
 						<ul class="icons">
-							<!--<li><a href="#" class="fa fa-twitter solo"><span>Twitter</span></a></li>-->
-							<li><a href="#" class="fa fa-facebook solo"><span>Facebook</span></a></li>
-							<li><a href="#" class="fa fa-envelope solo"><span>Email</span></a></li>
-							<li><a href="#" class="fa fa-github solo"><span>Github</span></a></li>
+							{% for link in site.prologue.social %}
+							<li><a href="{{ link.href }}" class="fa fa-{{ link.icon }} solo"><span>{{ link.text }}</span></a></li>
+							{% endfor %}
 						</ul>
 				
 				</div>
@@ -79,9 +78,11 @@
 				
 				<!-- Copyright -->
 					<div class="copyright">
-						<p>&copy; 2013 Jason &amp; Ali Biatek. All rights reserved.</p>
+						<p>&copy; {{ site.prologue.copyright }}</p>
 						<ul class="menu">
-							<li>Design based on &#8220;Prologue&#8221; by <a href="http://html5up.net">HTML5 UP</a></li>
+							{% for item in site.prologue.bottom %}
+							<li>{{ item }}</li>
+							{% endfor %}
 						</ul>
 					</div>
 				
