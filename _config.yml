@@ -1,4 +1,4 @@
-exclude: [Gemfile, Gemfile.lock, README.txt, README.md, LICENSE.txt]
+exclude: [Gemfile, Gemfile.lock, README.txt, README.md, LICENSE.txt, run_local.sh]
 
 prologue:
         author: Jason and Ali
