@@ -4,11 +4,13 @@ prologue:
         author: Jason and Ali
         byline: October 4, 2014
         avatar: images/avatar.jpg
-        copyright: "2013 Jason &amp; Ali Biatek. All rights reserved."
+        copyright: "2014 Jason &amp; Ali Biatek. All rights reserved."
         bottom: 
                 - "Design based on &#8220;Prologue&#8221; by <a href=\"http://html5up.net\">HTML5 UP</a>"
                 - "Photos by ???"
         social:
+                # Icons can be found here: http://fontawesome.io/icons/
+                # (you don't need the "fa-" prefix)
               - text: Twitter
                 href: "#"
                 icon: twitter
@@ -22,5 +24,5 @@ prologue:
                 icon: envelope
 
               - text: Github
-                href: "#"
+                href: "https://github.com/weddingsite/weddingsite.github.io"
                 icon: github
