@@ -1,0 +1,18 @@
+body
+{
+	color:white;
+	background-color:black;
+	margin:25px 30px;
+	max-width:600px;
+}
+.words
+{
+	font-family: 'Fenix', serif;
+	font-size:large;
+	text-align:justify;
+}
+.words a 
+{
+	color:white;
+	text-decoration:none;
+}
