@@ -1,3 +1,21 @@
+Licensing: 
+
+The files derived from HTML5 UP's Prologue theme are released under the same
+license that they distribute it under, reproduced below. That includes the
+following files:
+
+- `_includes/divider.html`
+- `_layouts/prologue.html`
+- Everything in `css/`, `js/`, and I suppose the "placeholder" images in `images/` (pic01.jpg through pic08.jpg)
+
+Everything else, we reserve the rights to (or in the case of photographs of us
+taken by our photographer, they own the copyright and we are using with
+permission). Feel free to use small bits of code from the other stuff (for
+example, YAML front matter or snippets of HTML) to help build your own
+website, but the the actual English text, etc, is personal to us. 
+
+----
+
 Creative Commons Attribution 3.0 Unported
 http://creativecommons.org/licenses/by/3.0/
 
