@@ -451,7 +451,7 @@
 	/* Box */
 
 		.box {
-			background: #fff;
+			background: #DBD7E5;
 			color: #39454b;
 			padding: 2em;
 		}
@@ -1024,13 +1024,14 @@
 /*********************************************************************************/
 
 	#header {
+		color: white;
 		position: fixed;
 		z-index: 10000;
 		left: 0;
 		top: 0;
 		width: 100%;
-		background: #fff;
-		background: rgba(255,255,255,0.95);
+		background: #282234;
+		background: rgba(28,22,34,0.95);
 		height: 3em;
 		line-height: 3em;
 		box-shadow: 0 0 0.15em 0 rgba(0,0,0,0.1);
