@@ -565,11 +565,11 @@
 					}
 
 				.main.style3.primary {
-					background: #fff;
+					background: #DBD7E5;
 				}
 			
 				.main.style3.secondary {
-					background: #f5f6f7;
+					background: #A399BD;
 				}
 
 	/* Dark */
@@ -1115,6 +1115,50 @@
 		background-attachment: fixed, fixed;
 		background-position: top left, center center;
 	}
+/*********************************************************************************/
+/* Three                                                                         */
+/*********************************************************************************/
+
+	#three {
+		background: url('images/overlay.png'), url('../images/three.jpg');
+		background-size: 256px 256px, cover;
+		background-attachment: fixed, fixed;
+		background-position: top left, center center;
+	}
+
+/*********************************************************************************/
+/* Four                                                                           */
+/*********************************************************************************/
+
+	#four {
+		background: url('images/overlay.png'), url('../images/four.jpg');
+		background-size: 256px 256px, cover;
+		background-attachment: fixed, fixed;
+		background-position: top left, center center;
+	}
+
+/*********************************************************************************/
+/* Five                                                                           */
+/*********************************************************************************/
+
+	#five {
+		background: url('images/overlay.png'), url('../images/five.jpg');
+		background-size: 256px 256px, cover;
+		background-attachment: fixed, fixed;
+		background-position: top left, center center;
+	}
+
+/*********************************************************************************/
+/* Six                                                                           */
+/*********************************************************************************/
+
+	#six {
+		background: url('images/overlay.png'), url('../images/six.jpg');
+		background-size: 256px 256px, cover;
+		background-attachment: fixed, fixed;
+		background-position: top left, center center;
+	}
+
 
 /*********************************************************************************/
 /* Work                                                                          */
@@ -1202,7 +1246,7 @@
 		height: 5em;
 		line-height: 5em;
 		margin: 0;
-		background: #39454b;
+		background: #282234;
 		color: #999;
 		color: rgba(185,186,187,0.5);
 		overflow: hidden;
