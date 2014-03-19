@@ -8,7 +8,7 @@
 			useFullScreen: true,
 			
 		// Section Transitions
-			useSectionTransitions: true,
+			useSectionTransitions: false,
 
 		// Fade in speed (in ms)
 			fadeInSpeed: 1000,
