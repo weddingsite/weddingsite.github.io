@@ -10,7 +10,7 @@
 /* Basic                                                                         */
 /*********************************************************************************/
 
-	.typewriter {
+	.typewriter, h2 {
 		font-family: 'Cutive', serif;
 		font-weight: 400;
 	}
@@ -1116,27 +1116,27 @@
 		background: url('images/overlay.png'), url('../images/intro.jpg');
 		background-size: 256px 256px, cover;
 		background-attachment: fixed, fixed;
-		background-position: top left, bottom center;
+		background-position: 0%, 30%;
 		background-repeat: repeat, no-repeat;
 	}
 
 /*********************************************************************************/
-/* One                                                                           */
+/* Ali                                                                           */
 /*********************************************************************************/
 
-	#one {
-		background: url('images/overlay.png'), url('../images/one.jpg');
+	#ali {
+		background: url('images/overlay.png'), url('../images/ali.jpg');
 		background-size: 256px 256px, cover;
 		background-attachment: fixed, fixed;
 		background-position: top left, center center;
 	}
 
 /*********************************************************************************/
-/* Two                                                                           */
+/* Jason                                                                           */
 /*********************************************************************************/
 
-	#two {
-		background: url('images/overlay.png'), url('../images/two.jpg');
+	#jason {
+		background: url('images/overlay.png'), url('../images/jason.jpg');
 		background-size: 256px 256px, cover;
 		background-attachment: fixed, fixed;
 		background-position: top left, center center;
