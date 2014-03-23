@@ -3,7 +3,6 @@
 @import url(http://fonts.googleapis.com/css?family=Open+Sans:400,700);
 @import url(http://fonts.googleapis.com/css?family=Cutive);
 @import url(http://fonts.googleapis.com/css?family=Lovers+Quarrel);
-@import url(http://fonts.googleapis.com/css?family=Ubuntu+Mono:400,700);
 @font-face{font-family:'FontAwesome';src:url('font/fontawesome-webfont.eot?v=4.0.1');src:url('font/fontawesome-webfont.eot?#iefix&v=4.0.1') format('embedded-opentype'),url('font/fontawesome-webfont.woff?v=4.0.1') format('woff'),url('font/fontawesome-webfont.ttf?v=4.0.1') format('truetype'),url('font/fontawesome-webfont.svg?v=4.0.1#fontawesomeregular') format('svg');font-weight:normal;font-style:normal}
 
 /*********************************************************************************/
@@ -19,10 +18,10 @@
 		font-weight: 800;
 		font-size: 80pt;
 	}
-	.ubuntu {
-		font-family: 'Ubuntu Mono', sans-serif;
+	.monospace {
+		font-family: 'Cutive', serif;
 		font-weight: 400;
-		font-size: 70pt;
+		font-size: 60pt;
 	}
 
 	.shadow {
@@ -30,6 +29,13 @@
 	}
 	.mobile_only {
 		display: none;
+	}
+
+	#intro a {
+		text-decoration:none; 
+		color: #664AAC; 
+		text-shadow: 0px 0px 10px #FFF;
+		
 	}
 
 	body {
