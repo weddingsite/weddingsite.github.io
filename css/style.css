@@ -97,7 +97,7 @@
 	}
 
 	a {
-		color: #98c593;
+		color: #785084;
 
 		-moz-transition: all 0.2s ease-in-out, color 0.2s ease-in-out;
 		-webkit-transition: all 0.2s ease-in-out, color 0.2s ease-in-out;
@@ -1134,6 +1134,18 @@
 		background-position: 0%, 30%;
 		background-repeat: repeat, no-repeat;
 	}
+
+/*********************************************************************************/
+/* Our story                                                                         */
+/*********************************************************************************/
+
+	#story {
+		background: url('images/overlay.png'), url('../images/running.jpg');
+		background-size: 256px 256px, cover;
+		background-attachment: fixed, fixed;
+		background-position: top left, center center;
+	}
+
 
 /*********************************************************************************/
 /* Ali                                                                           */
