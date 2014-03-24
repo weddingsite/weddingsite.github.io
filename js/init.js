@@ -8,7 +8,7 @@
 			useFullScreen: true,
 			
 		// Section Transitions
-			useSectionTransitions: false,
+			useSectionTransitions: true,
 
 		// Fade in speed (in ms)
 			fadeInSpeed: 1000,
@@ -164,7 +164,7 @@
 												});
 									
 										// Work
-											$('#work')
+											$('#adventures')
 												.scrollwatch({
 													delay:		25,
 													range:		0.6,
