@@ -31,6 +31,15 @@
 		display: none;
 	}
 
+	#mobile_bar {
+		background-color: rgba(28, 22, 34, 0.952941); 
+		padding: 0px 0px 15px 0px;
+	}
+	#mobile_bar a {
+		text-decoration: none;
+		padding: 0px 15px 0px 0px;
+	}
+
 	#intro a {
 		text-decoration:none; 
 		color: #664AAC; 
