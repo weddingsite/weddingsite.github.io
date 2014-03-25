@@ -231,7 +231,7 @@
 											.removeClass('inactive');
 								
 									// Work
-										$('#work')
+										$('#adventures')
 											.unscrollwatch()
 											.find('.row.images').removeClass('inactive');
 
