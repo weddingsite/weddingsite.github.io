@@ -164,7 +164,7 @@
 												});
 									
 										// Work
-											$('#adventures')
+											$('.animated')
 												.scrollwatch({
 													delay:		25,
 													range:		0.6,
@@ -231,7 +231,7 @@
 											.removeClass('inactive');
 								
 									// Work
-										$('#adventures')
+										$('.animated')
 											.unscrollwatch()
 											.find('.row.images').removeClass('inactive');
 

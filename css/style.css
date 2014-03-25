@@ -1214,16 +1214,16 @@
 
 
 /*********************************************************************************/
-/* Work                                                                          */
+/* Animated gallery                                                                         */
 /*********************************************************************************/
 
-	#work {
+	.animated {
 	}
 	
-		#work .row.images {
+		.animated .row.images {
 		}
 	
-			#work .row.images .image {
+			.animated .row.images .image {
 				position: relative;
 				top: 0;
 				left: 0;
@@ -1242,18 +1242,18 @@
 				transform: translateZ(0);
 			}
 		
-			#work .row.images.inactive {
+			.animated .row.images.inactive {
 			}
 
-				#work .row.images.inactive .image {
+				.animated .row.images.inactive .image {
 					opacity: 0;
 				}
 			
-				#work .row.images.inactive .image.l {
+				.animated .row.images.inactive .image.l {
 					left: -14em;
 				}
 			
-				#work .row.images.inactive .image.r {
+				.animated .row.images.inactive .image.r {
 					left: 14em;
 				}
 			
