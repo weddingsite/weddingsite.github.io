@@ -85,6 +85,7 @@
 						$all
 							.fadeTo(_settings.fadeInSpeed, 1, function() {
 								$body.removeClass('loading');
+								$('#intro').removeClass('inactive');
 								$all.fadeTo(0, 1);
 							});
 					}, _settings.fadeInSpeed);
