@@ -1213,7 +1213,18 @@
 		background-attachment: fixed, fixed;
 		background-position: top left, center center;
 	}
-	
+
+/*********************************************************************************/
+/* Ceremony blurb                                                                  */
+/*********************************************************************************/
+
+	#ceremony_blurb {
+		background: url('images/overlay.png'), url('../images/arboretum_barn.jpg');
+		background-size: 256px 256px, cover;
+		background-attachment: fixed, fixed;
+		background-position: top left, center center;
+	}
+
 /*********************************************************************************/
 /* Three                                                                         */
 /*********************************************************************************/
