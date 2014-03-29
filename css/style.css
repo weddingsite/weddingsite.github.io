@@ -1204,6 +1204,17 @@
 	
 
 /*********************************************************************************/
+/* Engagement photos                                                                        */
+/*********************************************************************************/
+
+	#engagement_photos {
+		background: url('images/overlay.png'), url('../images/fulls/engagement/AliJason-114-3106953392-O.jpg');
+		background-size: 256px 256px, cover;
+		background-attachment: fixed, fixed;
+		background-position: top left, center center;
+	}
+	
+/*********************************************************************************/
 /* Three                                                                         */
 /*********************************************************************************/
 
