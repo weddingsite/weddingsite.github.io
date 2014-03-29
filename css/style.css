@@ -1140,10 +1140,10 @@
 /*********************************************************************************/
 
 	#story {
-		background: url('images/overlay.png'), url('../images/running.jpg');
+		background: url('images/overlay.png'), url('../images/ourstory.jpg');
 		background-size: 256px 256px, cover;
 		background-attachment: fixed, fixed;
-		background-position: top left, center center;
+		background-position: 20% 0%;
 	}
 
 
@@ -1176,8 +1176,19 @@
 		background: url('images/overlay.png'), url('../images/ring.jpg');
 		background-size: 256px 256px, cover;
 		background-attachment: fixed, fixed;
-		background-position: top left, center center;
+		background-position: 70% 0%;
 	}
+/*********************************************************************************/
+/* Proposal - Jason                                                                     */
+/*********************************************************************************/
+
+	#proposal_jason {
+		background: url('images/overlay.png'), url('../images/jumping.jpg');
+		background-size: 256px 256px, cover;
+		background-attachment: fixed, fixed;
+		background-position: 30% 0%;
+	}
+
 
 
 /*********************************************************************************/
