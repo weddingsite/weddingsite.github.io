@@ -1,27 +1,6 @@
 ---
 ---
-<!DOCTYPE HTML>
-<html>
-	<head>
-		<title>Jason and Ali are totally getting married!</title>
-		<meta http-equiv="content-type" content="text/html; charset=utf-8" />
-		<meta name="description" content="" />
-		<meta name="keywords" content="" />
-		<!--[if lte IE 8]><script src="css/ie/html5shiv.js"></script><![endif]-->
-		<script src="js/jquery.min.js"></script>
-		<script src="js/jquery.poptrox.min.js"></script>
-		<script src="js/skel.min.js"></script>
-		<script src="js/init.js"></script>
-		<noscript>
-			<link rel="stylesheet" href="css/skel-noscript.css" />
-			<link rel="stylesheet" href="css/style.css" />
-		</noscript>
-		<!--[if lte IE 8]><link rel="stylesheet" href="css/ie/v8.css" /><![endif]-->
-	</head>
-	<body>
-
-		<!-- Header -->
-		{% include header_include.html %}
+{% include header.html title="Welcome!" %}
 
 		<!-- Intro -->
 			<section id="intro" class="main style1 dark">
@@ -168,9 +147,10 @@
 				</div>
 			</section>
 
-			<!-- Adventures -->
-			<section id="engagement_photos" class="main style3 primary">
+			<!-- Engagement photos blurb -->
+			<section id="engagement_photos_blurb" class="main style3 primary"  style="background-color: rgb(186, 202, 207);">
 				<div class="content container">
+
 					<header>
 						<h2>Engagement photos</h2> <!-- Note: Maybe use rgb(186, 202, 207); as the background? -->
 					</header>
@@ -205,11 +185,22 @@
 
 
 			
-			<section id="ceremony_blurb" class="main style3 dark">
+			<!-- Ceremony -->
+			<section id="ceremony" class="main style3 dark">
 				<div class="content container small shadow">
 					<header><h2>The Ceremony</h2></header>
 
-					<p>Content!</p>
+					<p>We are getting married on October 4th, 2014 at the <a href="http://www.arboretum.umn.edu">
+						Minnesota Landscape Arboretum</a>.</p>
+					<p>The ceremony begins at 5:00 PM, however our guests will all receive
+					full day passes to enjoy the beautiful fall day at the arboretum! Please
+					see the invitation for more information. As the day gets closer, we'll
+					post more here too.</p>
+
+					<p> Our reception will be just down the road, at <a href="http://www.gardenroomofedenprairie.com">
+						The Garden Room</a> in the Eden Prairie City Center!</p>
+
+					<p style="font-size: 8pt">(This photo is from the <a href="https://www.facebook.com/MnArboretum/photos/pb.89412116283.-2207520000.1396138386./10151765732026284/?type=3&src=https%3A%2F%2Fscontent-b.xx.fbcdn.net%2Fhphotos-prn2%2Ft31.0-8%2F1403530_10151765732026284_1097059970_o.jpg&smallsrc=https%3A%2F%2Fscontent-b.xx.fbcdn.net%2Fhphotos-prn2%2Ft1.0-9%2F1378235_10151765732026284_1097059970_n.jpg&size=2048%2C1365&fbid=10151765732026284">Arboretum's Facebook page</a>.)</p>
 				</div>
 			</section>	
 
@@ -246,33 +237,4 @@
 				</div>
 			</section>
 
-
-
-
-		<!-- Footer -->
-			<footer id="footer">
-			
-				<!--
-				     Social Icons
-				     
-				     Use anything from here: http://fortawesome.github.io/Font-Awesome/cheatsheet/)
-				-->
-					<ul class="actions">
-						<li><a href="https://github.com/jbiatek/weddingsite" class="fa solo fa-github"><span>GitHub</span></a></li>
-						<li><a href="#" class="fa solo fa-facebook"><span>Facebook</span></a></li>
-						<li><a href="#" class="fa solo fa-flickr"><span>Flickr</span></a></li>
-						<li><a href="#" class="fa solo fa-pinterest"><span>Pinterest</span></a></li>
-						<li><a href="#" class="fa solo fa-instagram"><span>Instagram Hashtag</span></a></li>
-					</ul>
-
-				<!-- Menu -->
-					<ul class="menu">
-						<li>&copy; Jason &amp; Ali Biatek</li>
-						<li>Design: <a href="http://html5up.net/">HTML5 UP</a></li>
-						<li>Photography by: <a href="http://www.jeanninemarie.com">Jeannine Marie</a></li>
-					</ul>
-			
-			</footer>
-
-	</body>
-</html>
+{% include footer.html %}
