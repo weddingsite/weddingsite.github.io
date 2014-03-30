@@ -16,11 +16,22 @@
 	.fancy {
 		font-family: 'Lovers Quarrel', cursive;
 		font-weight: 800;
-		font-size: 80pt;
 	}
 	.monospace {
 		font-family: 'Cutive', serif;
 		font-weight: 400;
+	}
+	
+	#header .fancy {
+		font-weight: 400;
+		font-size: 20pt;
+	}
+
+	#intro .fancy {
+		font-size: 80pt;
+	}		
+
+	#intro .monospace {
 		font-size: 50pt;
 	}
 
