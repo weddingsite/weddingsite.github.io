@@ -1,1 +1,2 @@
 exclude: [Gemfile, Gemfile.lock, README.txt, README.md, LICENSE.txt, run_local.sh, CNAME]
+markdown: kramdown
