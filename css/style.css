@@ -26,6 +26,9 @@
 		font-weight: 400;
 		font-size: 20pt;
 	}
+	#header .monospace {
+		font-size: 13pt;
+	}
 
 	#intro .fancy {
 		font-size: 80pt;
