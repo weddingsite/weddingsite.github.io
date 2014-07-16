@@ -45,6 +45,10 @@
 		display: none;
 	}
 
+	.clearbg {
+		background-color: rgba(255, 255, 255, 0.7);
+	}
+
 	#mobile_bar {
 		background-color: rgba(28, 22, 34, 0.952941); 
 		padding: 0px 0px 15px 0px;
@@ -1250,6 +1254,17 @@
 		background-attachment: fixed, fixed;
 		background-position: top left, center center;
 	}
+/*********************************************************************************/
+/* RSVP                                                                  */
+/*********************************************************************************/
+
+	#rsvp {
+		background: url('images/overlay.png'), url('../images/fulls/adventures/backdrop.JPG');
+		background-size: 256px 256px, cover;
+		background-attachment: fixed, fixed;
+		background-position: top left, center center;
+	}
+
 
 
 /*********************************************************************************/
