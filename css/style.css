@@ -46,7 +46,7 @@
 	}
 
 	.clearbg {
-		background-color: rgba(255, 255, 255, 0.7);
+		background-color: rgba(255, 255, 255, 0.7) !important;
 	}
 
 	#mobile_bar {
@@ -1242,6 +1242,19 @@
 		background-attachment: fixed, fixed;
 		background-position: top left, center center;
 	}
+
+/*********************************************************************************/
+/* Ceremony main page section                                                                  */
+/*********************************************************************************/
+
+	#ceremony_main {
+		background: url('images/overlay.png'), url('../images/arboretum_path.jpg');
+		background-size: 256px 256px, cover;
+		background-attachment: fixed, fixed;
+		background-position: top left, center center;
+	}
+
+
 
 
 /*********************************************************************************/
