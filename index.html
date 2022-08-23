@@ -1,42 +1,249 @@
 ---
-title: Jason and Ali are totally getting married!
-layout: prologue
-nav:
- - text: Welcome
-   icon: home
-   class: two
-   id: welcome
-
- - text: Ceremony
-   icon: leaf
-   class: four
-   id: ceremony
-
- - text: Reception
-   icon: cutlery
-   class: six
-   id: reception
-
- - text: Registry
-   icon: gift
-   class: eight
-   id: registry
-
 ---
+{% include header.html title="Welcome!" %}
 
-<img src="images/pic01.jpg" alt="New picture coming soon" class="image featured" />
+		<!-- Intro -->
+			<section id="intro" class="main style1 dark">
+				<div class="content container small shadow">
+					<header>
+						<h2><span class="monospace">Jason</span> <span class="fancy">& Ali</span></h2>
+						<h3 class="typewriter">are totally getting married!</h3>
+						<h3 class="typewriter">october 4<sup>th</sup>, 2014</h3>
+						<h3 class="typewriter">chanhassen, mn</h3> 
+					</header>
+					<p>Welcome! We are so glad to have you here. When you get the chance, we'd love 
+					for you to <a href="guestbook.html">sign our online guestbook</a>!
+					<!--We've been on <a href="/ourstory.html">such an amazing journey together</a>,
+					and <a href="/theproposal.html">now we're engaged!</a>
+					We've gotten some <a href="/engagement_photos.html">really cool engagement 
+					photos</a> taken, so you don't want to miss them. We'd also love it
+					if you left a note for us in our <a href="/guestbook.html">online guestbook</a>.
+					And, of course, we've got <a href="/ceremony.html">the details about the ceremony!</a>
+					-->
+					</p>
 
-<h2><img src="images/construction.gif" alt="Construction!">Jason and Ali are totally getting married!<img src="images/construction.gif" alt="More construction!"></h2>
-<p>Yep, it's really happening. </p>
+					<footer>
+						<a href="#story" class="button style2 down">More</a>
+					</footer>
+				</div>
+			</section>
 
-{% include divider.html index="1" %}
+			<!-- Our story -->
+			<section id="story" class="main style2 right fullscreen" >
+				<div class="content box style2" style="background-color: rgba(255, 255, 255, 0.7);">
+					<header><h2>Our Story</h2></header>
+					<p> Ali and Jason first met in high school, and they got to know each other
+					when they both took AP Music Theory. Sadly, they never dated back then, 
+					and Jason's attempt to ask Ali to prom was thwarted. But luckily, their 
+					amazing group of friends continued to get together long after they had gone 
+					their separate ways for college. They first kissed after driving home from
+					a group trip to the Minnesota Renaissance Festival (which is now tradition),
+					and after much deliberation about the prospect of dating long distance,
+					they officially began dating on December 3rd, 2009. Since then,
+					they've been on many exciting adventures&hellip;</p>
 
-Here's the ceremony!
+					<p><a href="adventures.html">Adventure photo gallery</a></p>
+					
+				</div>
+			</section>
 
-{% include divider.html index="2" %}
+		<!-- Adventures -->
+			<section id="adventure_gallery" class="main style3 primary">
+				<div class="content container clearbg">
+					<header style=" padding-top: 50px; ">
+						<h2>Our adventures!</h2>
+					</header>
+					
+					
+					<!--
+						 Lightbox Gallery
+						 
+						 Powered by poptrox. Full docs here: https://github.com/n33/jquery.poptrox
+					-->
+						<a href="adventures.html">
+						<div class="container small animated">
+							<div class="row flush images">
+								<div class="6u"><img class="image full l" src="images/thumbs/cabin.jpg" title="Cascade River Falls" alt="" /></div>
+								<div class="6u"><img class="image full r" src="images/thumbs/roadtrip.JPG" title="Road Trip Across America" alt="" /></div>
+							</div>
+							<div class="row flush images">
+								<div class="6u"><img class="image full l" src="images/thumbs/glacier.jpg" title="Glacier National Park" alt="" /></div>
+								<div class="6u"><img class="image full r" src="images/thumbs/winery.jpg" title="Parley Lake Winery" alt="" /></div>
+							</div>
+							<div class="row flush images">
+								<div class="6u"><img class="image full l" src="images/thumbs/disney.jpg" title="Disney World!" alt="" /></div>
+								<div class="6u"><img class="image full r" src="images/thumbs/duluth.jpg" title="The North Shore" alt="" /></div>
+							</div>
+						</div>
+						</a>
+					<p>&nbsp;</p>
 
-Here's the reception!
 
-{% include divider.html index="3" %}
+					
 
-We registered for gifts.
+				</div>
+			</section>	
+
+			<!-- Proposal -->
+			<section id="proposal" class="main style2 left fullscreen">
+				<div class="content box style2" style="background-color: rgba(255, 255, 255, 0.7);">
+					<header><h2>The Proposal &mdash;<br> Her Story</h2></header>
+					<p style="font-size:85%"> I knew something was up when we were getting ready to go out to dinner the 
+					night of our 4 year anniversary and suddenly Jason declared that he had no
+					black socks, and so he must immediately run to Target, and then bolted out
+					the door. It was quite un-Jason-like, so I was pretty suspicious, but also really hungry for dinner.
+					Dinner, as it turned out, was at this lovely restaurant called Forepaugh's in St Paul,
+					and we got through the meal without any surprises, so I started to think that 
+					all of my suspicions were for naught. But then the dessert menu came, and
+					Jason told me not to order because he had other plans for desssert.
+					But, before dessert, he asked if I would like to go explore the upstairs of the restaurant
+					(which is apparently a haunted house). I'm a sucker for 19th century 
+					architecture, so we went upstairs to explore. I was investigating the upper
+					landing when Jason informed me that he had an important question that he had
+					been meaning to ask, and my heart jumped, of course. But then
+				       	he told me that he'd been 
+					designing a website and he wanted to ask what I thought. I had thought
+					he was teasing, so I punched him. However, he actually did have a website
+					on his phone that he wanted me to see, and on the bottom was a sweet
+					little message and the words "Will you marry me?" and I burst into tears
+					as soon as I saw him get down on one knee. After we calmed down, we called
+					our parents, cried more, and then we went to dessert, which turned out to
+					be Perkins and our friends were there! We celebrated with tears, hugs, and pie. 
+					Also, it turned out the website he showed me on his phone was this one:
+					jasonandali.aretotallygettingmarried.com! So we've re-vamped it to be
+					our wedding website!</p>
+				</div>
+			</section>
+
+			<section id="proposal_jason" class="main style2 right fullscreen">
+				<div class="content box style2" style="background-color: rgba(255, 255, 255, 0.7);">
+					<header><h2>His Story</h2></header>
+					<p style="font-size:85%">Okay, so here's the thing about the socks. There was a mix-up with the
+					jewelry store, so they didn't have the ring ready when I went to get it that
+					morning. They said they'd try to get it sorted out as soon as possible,
+					but I had to get home and get ready for dinner. Then, just before I got
+					home, they called and said that it was ready sooner than expected! So I had
+					to come up with a way to go pick it up without Ali noticing. I ran through
+					a bunch of plans in my head&hellip; I could just propose as we headed out the door,
+					and say that we needed to go get the ring, I could blindfold her and say
+					that the restaurant was a surprise, and then make a "pit stop"&hellip; Ultimately,
+					I settled on the socks. In fairness, I legitimately only had one black sock
+					in my drawer, so it wasn't a total lie.</p>
+
+					<p style="font-size:85%">At that point, I hadn't quite started the ball rolling, so I had a decision
+					to make &mdash; propose tonight, or delay it? With the ring ending up getting 
+					finished early, I decided that all signs pointed to yes. I had already asked
+					her parents' permission, so I called my parents to let them know and sent a
+					text to our friends to tell them and ask them out to Perkins for dessert.
+					The whole thing was fairly improvised. I had put together the website and my
+					note, but other than that, I didn't have a firm plan. I thought about asking
+					early on in the dinner, so that she could be excited about it, but it just
+					never ended up feeling right. When we overheard the table next to us talking
+					to their server about exploring the house/restaurant, it all clicked into place.
+					It's a good thing I waited, because I don't know if we could have made it
+					through dinner otherwise. We dashed off to Perkins, calling our parents
+					along the way, and we were treated to some complimentary pies &mdash; a 
+					perfect end to the night.</p>
+				</div>
+			</section>
+
+			<!-- Engagement photos blurb -->
+			<section id="engagement_photos" class="main style3 dark shadow primary"  style="background-color: rgb(186, 202, 207);">
+				<div class="content container">
+
+					<header>
+						<h2>Engagement photos</h2> <!-- Note: Maybe use rgb(186, 202, 207); as the background? -->
+					</header>
+					
+					
+					<!--
+						 Lightbox Gallery
+						 
+						 Powered by poptrox. Full docs here: https://github.com/n33/jquery.poptrox
+					-->
+						<a href="engagement_photos.html">
+						<div class="container small animated">
+							<div class="row flush images">
+								<div class="6u"><img class="image full l" src="images/thumbs/engagement/AliJason-43-3106948439-O.jpg" /></div>
+								<div class="6u"><img class="image full r" src="images/thumbs/engagement/AliJason-65-3106950000-O.jpg"/></div>
+							</div>
+							<div class="row flush images">
+								<div class="6u"><img class="image full l" src="images/thumbs/engagement/AliJason-73-3106950934-O.jpg"/></div>
+								<div class="6u"><img class="image full r" src="images/thumbs/engagement/AliJason-93-3106952105-O.jpg" /></div>
+							</div>
+							<div class="row flush images">
+								<div class="6u"><img class="image full l" src="images/thumbs/engagement/AliJason-125-3106954029-O.jpg"/></div>
+								<div class="6u"><img class="image full r" src="images/thumbs/engagement/AliJason-170-3106956478-O.jpg"/></div>
+							</div>
+						</div>
+						</a>
+
+					
+
+				</div>
+			</section>	
+
+
+			
+			<!-- Ceremony -->
+			<section id="ceremony" class="main style3 dark">
+				<div class="content container small shadow">
+					<header><h2>The Ceremony</h2></header>
+
+					<p>We are getting married on October 4th, 2014 at the <a href="http://www.arboretum.umn.edu">
+						Minnesota Landscape Arboretum</a>.</p>
+					<p>The ceremony begins at 5:00 PM, however our guests will all receive
+					<strong>free</strong> full day passes to enjoy the beautiful fall day at the arboretum! 
+					Make sure to tell the guard at the gate that you are with our wedding, or show
+					them your invitation.
+					Please see <a href="ceremony.html">the main ceremony page</a> for more information.  In the meantime, 
+					<a href="guestbook.html">we'd love for you to
+						leave us a note on our online guestbook!</a></p> 
+
+					<p> Our reception will be just down the road, at <a href="http://www.gardenroomofedenprairie.com">
+						The Garden Room</a> in the Eden Prairie City Center!</p>
+					
+					<p>Don't forget to <a href="rsvp.html">RSVP if you haven't already!</a></p>
+
+					<p style="font-size: 8pt">(This photo is from the <a href="https://www.facebook.com/MnArboretum/photos/pb.89412116283.-2207520000.1396138386./10151765732026284/?type=3&src=https%3A%2F%2Fscontent-b.xx.fbcdn.net%2Fhphotos-prn2%2Ft31.0-8%2F1403530_10151765732026284_1097059970_o.jpg&smallsrc=https%3A%2F%2Fscontent-b.xx.fbcdn.net%2Fhphotos-prn2%2Ft1.0-9%2F1378235_10151765732026284_1097059970_n.jpg&size=2048%2C1365&fbid=10151765732026284">Arboretum's Facebook page</a>.)</p>
+				</div>
+			</section>	
+
+
+			<section id="wedding_party" class="main style3 primary">
+				<div class="content container">
+					<header>
+						<h2>Meet The Wedding Party!</h2>
+					</header>
+					
+					<!--
+						 Lightbox Gallery
+						 
+						 Powered by poptrox. Full docs here: https://github.com/n33/jquery.poptrox
+					-->
+						<div class="container small gallery">
+							<div class="row flush images">
+								<div class="6u"><a href="images/fulls/andy.jpg" class="image full r"><img src="images/thumbs/andy.jpg" title="Andy Tingblad" alt="" /></a></div>
+								<div class="6u"><a href="images/fulls/kendra.png" class="image full l"><img src="images/thumbs/kendra.png" title="Kendra Marsh" alt="" /></a></div>
+								
+							</div>
+							<div class="row flush images">
+								<div class="6u"><a href="images/fulls/ashley.jpg" class="image full r"><img src="images/thumbs/ashley.jpg" title="Ashley Whiting" alt="" /></a></div>
+								<div class="6u"><a href="images/fulls/ginelle.jpg" class="image full l"><img src="images/thumbs/ginelle.jpg" title="Ginelle Newstrom" alt="" /></a></div>
+								
+							</div>
+							<div class="row flush images">
+								<div class="6u"><a href="images/fulls/eric.jpg" class="image full r"><img src="images/thumbs/eric.jpg" title="Eric Anderson" alt="" /></a></div>
+								<div class="6u"><a href="images/fulls/sarah.jpg" class="image full l"><img src="images/thumbs/sarah.jpg" title="Sarah Rolek" alt="" /></a></div>
+								
+							</div>
+						</div>
+
+						<p style=" margin-top: 100px; font-size: 20pt;">Thanks for visiting! We'd love it if you <a href="guestbook.html">signed our guestbook!</a></p>
+
+						<img width=200px src="images/fall-leaf.png"/>
+
+				</div>
+			</section>
+
+{% include footer.html %}

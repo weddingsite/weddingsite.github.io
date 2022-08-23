@@ -1,109 +1,33 @@
-/*
-	Prologue 1.1 by HTML5 UP
-	html5up.net | @n33co
-	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
-*/
-
 /*********************************************************************************/
 /* Basic                                                                         */
 /*********************************************************************************/
 
-	body,input,textarea,select
-	{
-		font-size: 16pt;
+	body,input,textarea,select {
+		font-size: 14pt;
 	}
-
-	.container
-	{
-		padding: 0 2em 0 2em;
-	}
-
-	/* Lists */
-
-		ul.icons
-		{
-		}	
+	
+	/* Main */
 		
-			ul.icons li
-			{
-			}
-
-			ul.icons li a
-			{
-				width: 1.75em;
-			}
-
-	/* Item */
-	
-		.item
-		{
-			margin-bottom: 20px;
-		}
-
-/*********************************************************************************/
-/* Header                                                                        */
-/*********************************************************************************/
-
-	#header
-	{
-		width: 20%;
-	}
-
-	#logo
-	{
-	}
-	
-		#logo .image
-		{
-			position: relative;
-			margin: 0 0 0.5em 0;
-		}
-
-	#nav
-	{
-	}
-	
-		#nav ul
-		{
+		.main {
 		}
 		
-			#nav ul li
-			{
+			.main.style2 {
 			}
 			
-				#nav ul li a
-				{
-					font-size: 0.8em;
-					padding-top: 0.5em;
-					padding-bottom: 0.5em;
+				.main.style2 .content {
+					width: 50%;
 				}
-				
-					#nav ul li a span
-					{
-						padding-right: 2.25em;
+			
+					.main.style2.right .content {
+						left: 50%;
 					}
-					
-						#nav ul li a span:before
-						{
-							left: 100%;
-							margin-left: -1.25em;
-							line-height: 2.25em;
+
+				.main.style2.inactive {
+				}
+
+					.main.style2.inactive .content {
+					}
+
+						.main.style2.inactive.left .content {
+							left: -50%;
 						}
-
-/*********************************************************************************/
-/* Footer                                                                        */
-/*********************************************************************************/
-
-	#footer
-	{
-		margin-left: 20%;
-	}
-
-/*********************************************************************************/
-/* Main                                                                          */
-/*********************************************************************************/
-
-	#main
-	{
-		margin-left: 20%;
-	}

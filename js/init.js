@@ -1,260 +1,299 @@
-/*
-	Prologue 1.1 by HTML5 UP
-	html5up.net | @n33co
-	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
-*/
-
 /*********************************************************************************/
 /* Settings                                                                      */
 /*********************************************************************************/
 
-	var prologue_settings = {
+	var _settings = {
 
-		// skelJS (probably don't need to change anything here unless you know what you're doing)
-			skelJS: {
+		// Fullscreen
+			useFullScreen: true,
+			
+		// Section Transitions
+			useSectionTransitions: true,
+
+		// Fade in speed (in ms)
+			fadeInSpeed: 1000,
+
+		// skel
+			skel: {
 				prefix: 'css/style',
 				resetCSS: true,
-				boxModel: 'border',
 				useOrientation: true,
+				boxModel: 'border',
 				breakpoints: {
-					'widest':	{ range: '1881-', hasStyleSheet: false, containers: 1400, grid: { gutters: 40 } },
-					'wide':	{ range: '961-1880', containers: 1200, grid: { gutters: 40 } },
-					'normal':	{ range: '961-1620', containers: 960, grid: { gutters: 40 } },
-					'narrow':	{ range: '961-1320', containers: 'fluid', grid: { gutters: 20 } },
-					'narrower':	{ range: '-960', containers: 'fluid', grid: { gutters: 15 } },
-					'mobile':	{ range: '-640', containers: 'fluid', lockViewport: true, grid: { gutters: 15, collapse: true } }
+					'max': { range: '*', containers: 1440, hasStyleSheet: false },
+					'wide': { range: '-1920', containers: 1360 },
+					'normal': { range: '-1680', containers: 1200 },
+					'narrow': { range: '-1280', containers: 960 },
+					'narrower': { range: '-1000', containers: '95%', lockViewport: true },
+					'mobile': { range: '-745', containers: '95%', grid: { gutters: 20 }, lockViewport: true },
+					'mobile-narrow': { range: '-480', containers: '95%', grid: { collapse: true, gutters: 10 }, lockViewport: true, hasStyleSheet: false }
 				}
 			},
 
-		// skelJS Plugins (ditto; don't change unless you know what you're doing)
-			skelJSPlugins: {
-				panels: {
-					panels: {
-						sidePanel: {
-							breakpoints: 'narrower',
-							position: 'left',
-							size: 240,
-							html: '<div data-action="moveElement" data-args="header"></div></div>'
-						}
-					},
-					overlays: {
-						sidePanelToggle: {
-							breakpoints: 'narrower',
-							position: 'top-left',
-							width: '3.5em',
-							height: '2.25em',
-							html: '<div data-action="togglePanel" data-args="sidePanel" class="toggle">Menu</div>'
-						}
-					}
-				}
+		// poptrox
+			poptrox: {
+				baseZIndex: 10001,
+				useBodyOverflow: false,
+				usePopupEasyClose: false,
+				overlayColor: '#1f2328',
+				overlayOpacity: 0.65,
+				usePopupDefaultStyling: false,
+				usePopupCaption: true,
+				popupLoaderText: '',
+				windowMargin: 50,
+				usePopupNav: true
 			}
 
 	};
 
 /*********************************************************************************/
-/* Don't modify beyond this point unless you know what you're doing!             */
+/* jQuery Plugins                                                                */
 /*********************************************************************************/
 
-// Initialize skelJS
-	skel.init(prologue_settings.skelJS, prologue_settings.skelJSPlugins);
+	// formerize | (c) n33.co | MIT
+		jQuery.fn.formerize=function(){var _fakes=new Array(),_form = jQuery(this);_form.find('input[type=text],textarea').each(function() { var e = jQuery(this); if (e.val() == '' || e.val() == e.attr('placeholder')) { e.addClass('formerize-placeholder'); e.val(e.attr('placeholder')); } }).blur(function() { var e = jQuery(this); if (e.attr('name').match(/_fakeformerizefield$/)) return; if (e.val() == '') { e.addClass('formerize-placeholder'); e.val(e.attr('placeholder')); } }).focus(function() { var e = jQuery(this); if (e.attr('name').match(/_fakeformerizefield$/)) return; if (e.val() == e.attr('placeholder')) { e.removeClass('formerize-placeholder'); e.val(''); } }); _form.find('input[type=password]').each(function() { var e = jQuery(this); var x = jQuery(jQuery('<div>').append(e.clone()).remove().html().replace(/type="password"/i, 'type="text"').replace(/type=password/i, 'type=text')); if (e.attr('id') != '') x.attr('id', e.attr('id') + '_fakeformerizefield'); if (e.attr('name') != '') x.attr('name', e.attr('name') + '_fakeformerizefield'); x.addClass('formerize-placeholder').val(x.attr('placeholder')).insertAfter(e); if (e.val() == '') e.hide(); else x.hide(); e.blur(function(event) { event.preventDefault(); var e = jQuery(this); var x = e.parent().find('input[name=' + e.attr('name') + '_fakeformerizefield]'); if (e.val() == '') { e.hide(); x.show(); } }); x.focus(function(event) { event.preventDefault(); var x = jQuery(this); var e = x.parent().find('input[name=' + x.attr('name').replace('_fakeformerizefield', '') + ']'); x.hide(); e.show().focus(); }); x.keypress(function(event) { event.preventDefault(); x.val(''); }); });  _form.submit(function() { jQuery(this).find('input[type=text],input[type=password],textarea').each(function(event) { var e = jQuery(this); if (e.attr('name').match(/_fakeformerizefield$/)) e.attr('name', ''); if (e.val() == e.attr('placeholder')) { e.removeClass('formerize-placeholder'); e.val(''); } }); }).bind("reset", function(event) { event.preventDefault(); jQuery(this).find('select').val(jQuery('option:first').val()); jQuery(this).find('input,textarea').each(function() { var e = jQuery(this); var x; e.removeClass('formerize-placeholder'); switch (this.type) { case 'submit': case 'reset': break; case 'password': e.val(e.attr('defaultValue')); x = e.parent().find('input[name=' + e.attr('name') + '_fakeformerizefield]'); if (e.val() == '') { e.hide(); x.show(); } else { e.show(); x.hide(); } break; case 'checkbox': case 'radio': e.attr('checked', e.attr('defaultValue')); break; case 'text': case 'textarea': e.val(e.attr('defaultValue')); if (e.val() == '') { e.addClass('formerize-placeholder'); e.val(e.attr('placeholder')); } break; default: e.val(e.attr('defaultValue')); break; } }); window.setTimeout(function() { for (x in _fakes) _fakes[x].trigger('formerize_sync'); }, 10); }); return _form; };
 
-// jQuery functions
+	// scrolly | (c) n33.co | MIT
+		jQuery.fn.scrolly=function(d,b){d||(d=1E3);b||(b=0);jQuery(this).off("click.scrolly").on("click.scrolly",function(f){var a=jQuery(this),c=a.attr("href"),e;"#"==c.charAt(0)&&(1<c.length&&0<(e=jQuery(c)).length)&&(c=e.offset().top,a.hasClass("scrolly-centered")?a=c-($(window).height()-e.outerHeight())/2:(a=Math.max(c,0),b&&(a="function"==typeof b?a-b():a-b)),f.preventDefault(),jQuery("body,html").stop().animate({scrollTop:a},d,"swing"))})};
 
-	// formerize
-		jQuery.fn.n33_formerize=function(){var _fakes=new Array(),_form = jQuery(this);_form.find('input[type=text],textarea').each(function() { var e = jQuery(this); if (e.val() == '' || e.val() == e.attr('placeholder')) { e.addClass('formerize-placeholder'); e.val(e.attr('placeholder')); } }).blur(function() { var e = jQuery(this); if (e.attr('name').match(/_fakeformerizefield$/)) return; if (e.val() == '') { e.addClass('formerize-placeholder'); e.val(e.attr('placeholder')); } }).focus(function() { var e = jQuery(this); if (e.attr('name').match(/_fakeformerizefield$/)) return; if (e.val() == e.attr('placeholder')) { e.removeClass('formerize-placeholder'); e.val(''); } }); _form.find('input[type=password]').each(function() { var e = jQuery(this); var x = jQuery(jQuery('<div>').append(e.clone()).remove().html().replace(/type="password"/i, 'type="text"').replace(/type=password/i, 'type=text')); if (e.attr('id') != '') x.attr('id', e.attr('id') + '_fakeformerizefield'); if (e.attr('name') != '') x.attr('name', e.attr('name') + '_fakeformerizefield'); x.addClass('formerize-placeholder').val(x.attr('placeholder')).insertAfter(e); if (e.val() == '') e.hide(); else x.hide(); e.blur(function(event) { event.preventDefault(); var e = jQuery(this); var x = e.parent().find('input[name=' + e.attr('name') + '_fakeformerizefield]'); if (e.val() == '') { e.hide(); x.show(); } }); x.focus(function(event) { event.preventDefault(); var x = jQuery(this); var e = x.parent().find('input[name=' + x.attr('name').replace('_fakeformerizefield', '') + ']'); x.hide(); e.show().focus(); }); x.keypress(function(event) { event.preventDefault(); x.val(''); }); });  _form.submit(function() { jQuery(this).find('input[type=text],input[type=password],textarea').each(function(event) { var e = jQuery(this); if (e.attr('name').match(/_fakeformerizefield$/)) e.attr('name', ''); if (e.val() == e.attr('placeholder')) { e.removeClass('formerize-placeholder'); e.val(''); } }); }).bind("reset", function(event) { event.preventDefault(); jQuery(this).find('select').val(jQuery('option:first').val()); jQuery(this).find('input,textarea').each(function() { var e = jQuery(this); var x; e.removeClass('formerize-placeholder'); switch (this.type) { case 'submit': case 'reset': break; case 'password': e.val(e.attr('defaultValue')); x = e.parent().find('input[name=' + e.attr('name') + '_fakeformerizefield]'); if (e.val() == '') { e.hide(); x.show(); } else { e.show(); x.hide(); } break; case 'checkbox': case 'radio': e.attr('checked', e.attr('defaultValue')); break; case 'text': case 'textarea': e.val(e.attr('defaultValue')); if (e.val() == '') { e.addClass('formerize-placeholder'); e.val(e.attr('placeholder')); } break; default: e.val(e.attr('defaultValue')); break; } }); window.setTimeout(function() { for (x in _fakes) _fakes[x].trigger('formerize_sync'); }, 10); }); return _form; };
-	
-	// scrolly
-		jQuery.fn.n33_scrolly = function() {			
-			var bh = jQuery('body,html'), t = jQuery(this);
+	// scrollgress | (c) n33.co | MIT
+		(function(){var d=$(window),h=$(document),k=1E3;jQuery.fn.scrollwatch=function(c){if(1<this.length){for(var b=0;b<this.length;b++)$(this[b]).scrollwatch(c);return this}var a=jQuery.extend({range:0.5,anchor:"top",init:null,on:null,off:null,delay:0},c),d=$(this),e;a.init&&a.init(d);d.data("scrollwatch-state",0).scrollgress(function(c){window.clearTimeout(e);e=window.setTimeout(function(){if(0==d.data("scrollwatch-state")){if(c>=-1*a.range&&c<=a.range&&(d.data("scrollwatch-state",1),a.on))a.on(d)}else if(c<-1*a.range||c>=a.range)d.data("scrollwatch-state",0),a.off&&a.off(d)},a.delay)},{anchor:a.anchor},"scrollwatch");return d};jQuery.fn.unscrollwatch=function(){if(1<this.length){for(var c=0;c<this.length;c++)$(this[c]).unscrollwatch();return this}c=$(this);c.removeData("scrollwatch-state",0).unscrollgress("scrollwatch");return c};jQuery.fn.scrollgress=function(c,b,a){if(1<this.length){for(var g=0;g<this.length;g++)$(this[g]).scrollgress(c,b,a);return this}a||(a="scrollgress");var e=jQuery.extend({anchor:"top",direction:"both",scope:"element",easing:0},b),f=$(this);f.data(a+"-id")||f.data(a+"-id",k++);b=f.data(a+"-id");a="scroll."+a+"-"+b;d.off(a).on(a,function(){var a=f.offset().top,b=f.outerHeight();h.height();switch(e.scope){default:case "element":switch(e.anchor){default:case "top":a=-1*((a-d.scrollTop())/b);break;case "center":a=-1*((a-d.scrollTop()-(d.height()-b)/2)/b);break;case "bottom":a=-1*((a-d.scrollTop()-(d.height()-b))/b)}break;case "window":switch(e.anchor){default:case "top":a=-1*((a-d.scrollTop())/d.height());break;case "center":a=-1*((a-d.scrollTop()-(d.height()-b)/2)/d.height());break;case "bottom":a=-1*((a-d.scrollTop()-(d.height()-b))/d.height())}}"forwards"==e.direction?a=Math.max(0,a):"backwards"==e.direction&&(a=Math.min(0,a));0<a?a=Math.max(0,a-e.easing/100):0>a&&(a=Math.min(0,a+e.easing/100));c(a,f)}).trigger("scroll");return f};jQuery.fn.unscrollgress=function(c){if(1<this.length){for(var b=0;b<this.length;b++)$(this[b]).unscrollgress(c);return this}c||(c="scrollgress");var b=$(this),a;if(!b.data(c+"-id"))return b;a=b.data(c+"-id");d.off("scroll."+c+"-"+a);b.removeData(c+"-id");return b}})();
 
-			t.click(function(e) {
-				var h = jQuery(this).attr('href'), target;
+/*********************************************************************************/
+/* Initialize                                                                    */
+/*********************************************************************************/
 
-				if (h.charAt(0) == '#' && h.length > 1 && (target = jQuery(h)).length > 0)
-				{
-					var pos = Math.max(target.offset().top, 0);
-					e.preventDefault();
-					bh
-						.stop(true, true)
-						.animate({ scrollTop: pos }, 'slow', 'swing');
-				}
-			});
+	// skel
+		skel.init(_settings.skel);
+
+	// jQuery
+		jQuery(function() {
+
+			var $window = $(window),
+				$body = $('body'),
+				$header = $('#header'),
+				$all = $body.add($header),
+				sectionTransitionState = false;
+
+			// Disable animations/transitions until everything's loaded
+				$all
+					.addClass('loading')
+					.fadeTo(0, 0.0001);
+				
+				$window.load(function() {
+					window.setTimeout(function() {
+						$all
+							.fadeTo(_settings.fadeInSpeed, 1, function() {
+								$body.removeClass('loading');
+								$('#intro').removeClass('inactive');
+								$all.fadeTo(0, 1);
+							});
+					}, _settings.fadeInSpeed);
+				});
+				
+			// Settings overrides
 			
-			return t;
-		};
-
-	// scrollzer
-		jQuery.n33_scrollzer = function(ids, userSettings) {
-
-			var top = jQuery(window), doc = jQuery(document);
+				// IE <= 9?
+					if (skel.vars.IEVersion <= 9)
+						_settings.useSectionTransitions = false;
 			
-			top.load(function() {
-
-				// Settings
-					var settings = jQuery.extend({
-						activeClassName:	'active',
-						suffix:				'-link',
-						pad:				50,
-						firstHack:			false,
-						lastHack:			false
-					}, userSettings);
-
-				// Variables
-					var k, x, o, l, pos;
-					var lastId, elements = [], links = jQuery();
-
-				// Build elements array
-					for (k in ids)
-					{
-						o = jQuery('#' + ids[k]);
-						l = jQuery('#' + ids[k] + settings.suffix);
+				// Touch?
+					if (skel.vars.isTouch) {
 					
-						if (o.length < 1
-						||	l.length < 1)
-							continue;
-						
-						x = {};
-						x.link = l;
-						x.object = o;
-						elements[ids[k]] = x;
-						links = links.add(l);
+						// Disable section transitions
+							_settings.useSectionTransitions = false;
+							
+						// Turn on touch mode
+							$body.addClass('touch');
+					
+					}
+					
+				// Mobile?
+					if (skel.isActive('mobile')) {
+					
+						// Reduce poptrox windowMargin
+							_settings.poptrox.windowMargin = 5;
+					
 					}
 
-				// Resize event (calculates start/end values for each element)
-					var resizeTimerId, resizeFunc = function() {
-						var x;
-						
-						for (k in elements)
-						{
-							x = elements[k];
-							x.start = Math.ceil(x.object.offset().top) - settings.pad;
-							x.end = x.start + Math.ceil(x.object.innerHeight());
-						}
-						
-						top.trigger('scroll');
-					};
-					
-					top.resize(function() {
-						window.clearTimeout(resizeTimerId);
-						resizeTimerId = window.setTimeout(resizeFunc, 250);
-					});
+			// Forms
+				if (skel.vars.IEVersion < 10)
+					$('form').formerize();
 
-				// Scroll event (checks to see which element is on the screen and activates its link element)
-					var scrollTimerId, scrollFunc = function() {
-						links.removeClass('scrollzer-locked');
-					};
-				
-					top.scroll(function(e) {
-						var i = 0, h, found = false;
-						pos = top.scrollTop();
+			// Gallery
+				$('.gallery').poptrox(_settings.poptrox);
 
-						window.clearTimeout(scrollTimerId);
-						scrollTimerId = window.setTimeout(scrollFunc, 250);
-						
-						// Step through elements
-							for (k in elements)
-							{
-								if (k != lastId
-								&&	pos >= elements[k].start
-								&&	pos <= elements[k].end)
-								{
-									lastId = k;
-									found = true;
-								}
-								
-								i++;
-							}
-							
-						// If we're using lastHack ...
-							if (settings.lastHack
-							&&	pos + top.height() >= doc.height())
-							{
-								lastId = k;
-								found = true;
-							}
-							
-						// If we found one ...
-							if (found
-							&&	!links.hasClass('scrollzer-locked'))
-							{
-								links.removeClass(settings.activeClassName);
-								elements[lastId].link.addClass(settings.activeClassName);
-							}
-					});
-					
-				// Initial trigger
-					top.trigger('resize');
-
-			});
-
-		};
-
-// Ready stuff
-	jQuery(function() {
-
-		var $window = $(window),
-			_IEVersion = (navigator.userAgent.match(/MSIE ([0-9]+)\./) ? parseInt(RegExp.$1) : 99);
-
-		// Initialize forms
-			// Add input "placeholder" support to IE <= 9
-				if (_IEVersion < 10)
-					$('form').n33_formerize();
-					
-			// Submit
-				jQuery('form .button.submit').click(function(e) {
-					e.preventDefault();
-					jQuery(this).closest('form').submit();
-				});
-
-		// Initialize events
-		
-			// Load
-				$window.load(function() {
+			// Events
 			
+				// State change (skel)
 					skel.onStateChange(function() {
-					
-						var fi = jQuery('.image.featured');
-					
-						// If we're mobile, do image alignment fix
+
+						// Force touch mode if we're in mobile
 							if (skel.isActive('mobile'))
-								fi.each(function() { var img = jQuery(this).children('img'); img.css('left', '50%').css('margin-left', -1 * (img.width() / 2)); });
-						// Otherwise, remove the fix if it was applied previously
-							else
-								fi.each(function() { jQuery(this).children('img').css('left', 0).css('margin-left', 0); });
+								$body.addClass('touch');
+							else if (!skel.vars.isTouch)
+								$body.removeClass('touch');
 					
+						// Section transitions
+							if (_settings.useSectionTransitions) {
+							
+								if (!skel.isActive('mobile')) {
+									
+									if (!sectionTransitionState) {
+									
+										sectionTransitionState = true;
+										
+										// Generic sections
+											$('.main.style1')
+												.scrollwatch({
+													delay:		50,
+													range:		0.25,
+													anchor:		'center',
+													init:		function(t) { t.addClass('inactive'); },
+													on:			function(t) { t.removeClass('inactive'); },
+													off:		function(t) { t.addClass('inactive'); }
+												});
+
+											$('.main.style2')
+												.scrollwatch({
+													delay:		50,
+													range:		0.5,
+													anchor:		'center',
+													init:		function(t) { t.addClass('inactive'); },
+													on:			function(t) { t.removeClass('inactive'); },
+													off:		function(t) { t.addClass('inactive'); }
+												});
+									
+										// Work
+											$('.animated')
+												.scrollwatch({
+													delay:		25,
+													range:		0.6,
+													anchor:		'center',
+													init:		function(t) { t.find('.row.images').addClass('inactive'); },
+													on:			function(t) {
+																	var	rows = t.find('.row.images'),
+																		length = rows.length,
+																		n = 0;
+																	
+																	rows.each(function() {
+																		var row = $(this);
+																		window.setTimeout(function() {
+																			row.removeClass('inactive');
+																		}, 100 * (length - n++));
+																	});
+																},
+													off:		function(t) {
+																	var	rows = t.find('.row.images'),
+																		length = rows.length,
+																		n = 0;
+																	
+																	rows.each(function() {
+																		var row = $(this);
+																		window.setTimeout(function() {
+																			row.addClass('inactive');
+																		}, 100 * (length - n++));
+																	});
+																}
+												});
+
+										// Contact
+											$('#contact')
+												.scrollwatch({
+													delay:		25,
+													range:		0.5,
+													anchor:		'center',
+													init:		function(t) { t.addClass('inactive'); },
+													on:			function(t) { t.removeClass('inactive'); },
+													off:		function(t) { t.addClass('inactive'); }
+												});
+
+										// Force scroll event
+											window.setTimeout(function() {
+												$window
+													.trigger('resize')
+													.trigger('scroll');
+											}, 0);
+												
+									}
+
+								}
+								else {
+
+									sectionTransitionState = false;
+
+									// Generic sections
+										$('.main.style1')
+											.unscrollwatch()
+											.removeClass('inactive');
+										
+										$('.main.style2')
+											.unscrollwatch()
+											.removeClass('inactive');
+								
+									// Work
+										$('.animated')
+											.unscrollwatch()
+											.find('.row.images').removeClass('inactive');
+
+									// Contact
+										$('#contact')
+											.unscrollwatch()
+											.removeClass('inactive');
+								
+								}
+
+							}
+						
 					});
 
-				});
+				// Resize
+					$window.resize(function() {
 
-		// Initialize scrolly links
-			jQuery('.scrolly').n33_scrolly();
+						// Disable animations/transitions
+							$body.addClass('loading');
 
-		// Initialize nav
-			var $nav_a = jQuery('#nav a');
-			
-			// Scrollyfy links
-				$nav_a
-					.n33_scrolly()
-					.click(function(e) {
-						
-						e.preventDefault();
-						
-						// Clear active and lock scrollzer until scrolling has stopped
-							$nav_a
-								.removeClass('active')
-								.addClass('scrollzer-locked');
+						window.setTimeout(function() {
+
+							// Update scrolly links
+								$('a[href^=#]').scrolly(1500, $header.outerHeight() - 1);
+
+							// Resize fullscreen elements
+								if (_settings.useFullScreen
+								&&	!skel.isActive('mobile')) {
+									$('.fullscreen').each(function() {
+									
+										var $t = $(this),
+											$c = $t.children('.content'),
+											x = Math.max(100, Math.round(($window.height() - $c.outerHeight() - $header.outerHeight()) / 2) + 1);
+
+										$t
+											.css('padding-top', x)
+											.css('padding-bottom', x);
+									
+									});
+								}
+								else
+									$('.fullscreen')
+										.css('padding-top', '')
+										.css('padding-bottom', '');
+								
+								
+							// Re-enable animations/transitions
+								window.setTimeout(function() {
+									$body.removeClass('loading');
+									$window.trigger('scroll');
+								}, 1000);
+
+						}, 100);
 					
-						// Set this link to active
-							jQuery(this).addClass('active');
 					});
-
-			// Initialize scrollzer
-				var ids = [];
-				
-				$nav_a.each(function() {
-					ids.push(jQuery(this).attr('href').substring(1));
+					
+			// Trigger events on load
+				$window.load(function() {
+					$window
+						.trigger('resize')
+						.trigger('scroll');
 				});
-				
-				jQuery.n33_scrollzer(ids, { pad: 200, lastHack: true });
 
-	});
+		});

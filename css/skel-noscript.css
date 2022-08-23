@@ -65,7 +65,7 @@
 		.\-1u { margin-left: 8.3333333333% }
 
 		.row > * {
-			padding: 40px 0 0 40px;
+			padding: 50px 0 0 50px;
 			float: left;
 			-moz-box-sizing: border-box;
 			-webkit-box-sizing: border-box;
@@ -75,11 +75,11 @@
 		}
 
 		.row + .row > * {
-			padding-top: 40px;
+			padding-top: 50px;
 		}
 
 		.row {
-			margin-left: -40px;
+			margin-left: -50px;
 		}
 
 	/* Rows */
@@ -114,55 +114,55 @@
 			/* Quarter */
 
 				.row.quarter > * {
-					padding: 10px 0 0 10px;
+					padding: 12.5px 0 0 12.5px;
 				}
 
 				.row.quarter + .row.quarter > * {
-					padding-top: 10px;
+					padding-top: 12.5px;
 				}
 
 				.row.quarter {
-					margin-left: -10px;
+					margin-left: -12.5px;
 				}
 
 			/* Half */
 
 				.row.half > * {
-					padding: 20px 0 0 20px;
+					padding: 25px 0 0 25px;
 				}
 
 				.row.half + .row.half > * {
-					padding-top: 20px;
+					padding-top: 25px;
 				}
 
 				.row.half {
-					margin-left: -20px;
+					margin-left: -25px;
 				}
 
 			/* One and (a) Half */
 
 				.row.oneandhalf > * {
-					padding: 60px 0 0 60px;
+					padding: 75px 0 0 75px;
 				}
 
 				.row.oneandhalf + .row.oneandhalf > * {
-					padding-top: 60px;
+					padding-top: 75px;
 				}
 
 				.row.oneandhalf {
-					margin-left: -60px;
+					margin-left: -75px;
 				}
 
 			/* Double */
 
 				.row.double > * {
-					padding: 80px 0 0 80px;
+					padding: 100px 0 0 100px;
 				}
 
 				.row.double + .row.double > * {
-					padding-top: 80px;
+					padding-top: 100px;
 				}
 
 				.row.double {
-					margin-left: -80px;
+					margin-left: -100px;
 				}
